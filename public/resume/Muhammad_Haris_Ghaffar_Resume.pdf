@@ -2,22 +2,33 @@
 1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
 2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
 3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >> endobj
-4 0 obj << /Length 480 >> stream
+4 0 obj << /Length 850 >> stream
 BT
-/F1 22 Tf 50 740 Td (MUHAMMAD HARIS GHAFFAR) Tj
-/F1 12 Tf 0 -25 Td (Full-Stack Developer & AI/ML Developer) Tj
-0 -18 Td (Email: hghaffar9292@gmail.com | Phone/WhatsApp: +92 335 3885592) Tj
-0 -18 Td (GitHub: https://github.com/harisghaffar92 | LinkedIn: haris-ghaffar-0043a5292) Tj
-0 -30 Td (EDUCATION:) Tj
-0 -18 Td (BS Computer Science - University of Sahiwal (2022 - 2026) | CGPA: 3.44 / 4.00) Tj
-0 -30 Td (FEATURED PROJECT:) Tj
-0 -18 Td (CampusConnect - Full-Stack Job & Career Portal (React, Django REST, JWT)) Tj
-0 -30 Td (TECHNICAL SKILLS:) Tj
-0 -18 Td (Python, C++, JavaScript, React, Django REST, Node.js, PHP, MySQL, SQLite, AI Prompting) Tj
-0 -30 Td (CERTIFICATIONS:) Tj
-0 -18 Td (- Introduction to Python (Kaggle)) Tj
-0 -18 Td (- Google Prompting Essentials Specialization (Google)) Tj
-0 -18 Td (- Getting Started with Excel (Coursera)) Tj
+/F1 20 Tf 140 740 Td (MUHAMMAD HARIS GHAFFAR) Tj
+/F1 11 Tf -60 -20 Td (Computer Science Graduate | Aspiring Software Developer) Tj
+/F1 9 Tf -20 -18 Td (Email: hghaffar9292@gmail.com | Phone: +92 335 3885592 | Location: Sahiwal, Pakistan) Tj
+0 -14 Td (GitHub: github.com/harisghaffar92 | LinkedIn: linkedin.com/in/haris-ghaffar-0043a5292) Tj
+0 -25 Td (PROFILE:) Tj
+0 -12 Td (Computer Science graduate with a strong foundation in software development, web technologies, databases,) Tj
+0 -12 Td (and problem-solving. Experienced in developing academic full-stack web applications using modern tools.) Tj
+0 -22 Td (EDUCATION:) Tj
+0 -12 Td (- ICS -- Government Postgraduate College Sahiwal (2021 - 2022)) Tj
+0 -12 Td (- BS Computer Science -- University of Sahiwal (2022 - 2026) | CGPA: 3.44 / 4.00) Tj
+0 -12 Td (  Relevant Courses: Database Systems, Data Structures, OOP, Web & AI, Graphic Designing) Tj
+0 -22 Td (TECHNICAL SKILLS:) Tj
+0 -12 Td (Programming Languages: Python, C++, JavaScript | Frontend: HTML/CSS, React) Tj
+0 -12 Td (Backend: Django, Node.Js | Database: MySQL, SQLite | Tools: VS Code, GitHub, Excel | AI: Prompting) Tj
+0 -22 Td (PROJECTS:) Tj
+0 -12 Td (- Final Year Project (FYP) - CampusConnect: Full-Stack Job & Career Portal) Tj
+0 -12 Td (  (Django REST Framework, React, JWT, skill matching, notifications, resume mgmt, admin moderation)) Tj
+0 -12 Td (- Online Book Store: PHP, MySQL, HTML, CSS, JavaScript e-commerce application) Tj
+0 -22 Td (SOFT SKILLS & LANGUAGES:) Tj
+0 -12 Td (Problem Solving, Team Collaboration, Quick Learning, Communication, Critical Thinking, Leadership) Tj
+0 -12 Td (Languages: Urdu (Native), English (Professional Working Proficiency)) Tj
+0 -22 Td (CERTIFICATIONS:) Tj
+0 -12 Td (- Introduction to Python (Kaggle)) Tj
+0 -12 Td (- Getting Started with Excel (Coursera)) Tj
+0 -12 Td (- Google Prompting Essentials Specialization (Google)) Tj
 ET
 endstream
 endobj
@@ -29,8 +40,8 @@ xref
 0000000059 00000 n 
 0000000116 00000 n 
 0000000243 00000 n 
-0000000774 00000 n 
+0000001144 00000 n 
 trailer << /Size 6 /Root 1 0 R >>
 startxref
-843
+1213
 %%EOF

@@ -4,51 +4,94 @@
   <meta charset="UTF-8">
   <title>Muhammad Haris Ghaffar — Resume</title>
   <style>
-    body { font-family: sans-serif; margin: 40px; color: #1e293b; line-height: 1.6; }
-    h1 { margin-bottom: 5px; color: #0f172a; }
-    h2 { border-bottom: 2px solid #38bdf8; padding-bottom: 5px; margin-top: 25px; color: #0284c7; }
-    .subtitle { font-size: 1.1em; color: #64748b; margin-bottom: 20px; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    ul { padding-left: 20px; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px auto; max-width: 800px; color: #1e293b; line-height: 1.6; background-color: #fff; padding: 20px; }
+    h1 { margin-bottom: 2px; color: #0f172a; text-transform: uppercase; letter-spacing: 1px; font-size: 24px; text-align: center; }
+    .subtitle { font-size: 14px; color: #475569; margin-bottom: 12px; font-weight: 600; text-align: center; }
+    .contact-info { font-size: 12px; text-align: center; color: #64748b; margin-bottom: 20px; border-bottom: 2px solid #0f172a; padding-bottom: 12px; }
+    h2 { border-bottom: 1.5px solid #0f172a; padding-bottom: 4px; margin-top: 20px; color: #0f172a; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; }
+    .edu-item, .proj-item { margin-bottom: 12px; }
+    .edu-header, .proj-header { display: flex; justify-content: space-between; font-weight: bold; font-size: 13px; }
+    .edu-sub { font-style: italic; font-size: 12px; color: #475569; }
+    p, ul { font-size: 12px; margin-top: 4px; margin-bottom: 6px; }
+    ul { padding-left: 18px; }
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 12px; }
+    .btn-print { display: block; margin: 0 auto 20px auto; padding: 8px 16px; background: #0284c7; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; }
+    @media print { .btn-print { display: none; } }
   </style>
 </head>
 <body>
+  <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+
   <h1>MUHAMMAD HARIS GHAFFAR</h1>
-  <div class="subtitle">Full-Stack Developer | AI/ML Developer | BS Computer Science</div>
-  <p><strong>Email:</strong> harisghaffar.dev@gmail.com | <strong>GitHub:</strong> github.com/HarisGhaffar | <strong>Location:</strong> Sahiwal, Pakistan</p>
+  <div class="subtitle">Computer Science Graduate | Aspiring Software Developer</div>
+  <div class="contact-info">
+    hghaffar9292@gmail.com &nbsp;|&nbsp; +92 335 3885592 &nbsp;|&nbsp; Sahiwal, Pakistan<br>
+    github.com/harisghaffar92 &nbsp;|&nbsp; linkedin.com/in/haris-ghaffar-0043a5292
+  </div>
   
+  <h2>PROFILE</h2>
+  <p>Computer Science graduate with a strong foundation in software development, web technologies, databases, and problem-solving. Experienced in developing academic full-stack web applications using modern development tools and version control. Passionate about building practical software solutions while continuously expanding my knowledge of JavaScript and modern web development. A quick learner, adaptable team player, and eager to contribute to real-world projects while growing as a software professional.</p>
+
   <h2>EDUCATION</h2>
-  <p><strong>BS Computer Science</strong> — University of Sahiwal (2022 – 2026)<br>
-  <strong>CGPA:</strong> 3.44 / 4.00<br>
-  <strong>Relevant Coursework:</strong> Database Systems, Data Structures & Algorithms, OOP, Web Engineering, Artificial Intelligence.</p>
+  <div class="edu-item">
+    <div class="edu-header">
+      <span>ICS</span>
+      <span>2021 – 2022</span>
+    </div>
+    <div class="edu-sub">Government Postgraduate College Sahiwal</div>
+  </div>
 
-  <h2>FEATURED PROJECTS</h2>
-  <p><strong>CampusConnect — Full-Stack Job & Career Portal</strong><br>
-  Technologies: React, Django REST Framework, JWT, Role-Based Access Control<br>
-  • Engineered role-based portal for students, alumni, and employers with skill-matching algorithms.<br>
-  • Built secure JWT authentication, dynamic resume upload management, and admin content moderation.</p>
-
-  <p><strong>Online Book Store — E-Commerce Application</strong><br>
-  Technologies: PHP, MySQL, HTML5, CSS3, JavaScript<br>
-  • Developed full e-commerce application with catalog browsing, shopping cart, order tracking, and CRUD admin panel.</p>
+  <div class="edu-item">
+    <div class="edu-header">
+      <span>BS Computer Science</span>
+      <span>2022 – 2026</span>
+    </div>
+    <div class="edu-sub">University of Sahiwal (CGPA: 3.44 / 4.00)</div>
+    <p><strong>Relevant Courses:</strong> Database Systems, Data Structures, OOP, Web & AI, Graphic Designing</p>
+  </div>
 
   <h2>TECHNICAL SKILLS</h2>
-  <div class="grid">
-    <div>
-      <p><strong>Languages:</strong> Python, C++, JavaScript</p>
-      <p><strong>Frontend:</strong> HTML5, CSS3, React, Tailwind CSS</p>
+  <p><strong>Programming Languages:</strong> Python, C++, JavaScript</p>
+  <p><strong>Frontend:</strong> HTML/CSS, React</p>
+  <p><strong>Backend:</strong> Django, Node.Js</p>
+  <p><strong>Database:</strong> MySQL, SQLite</p>
+  <p><strong>Tools:</strong> VS Code, GitHub, Microsoft Excel</p>
+  <p><strong>AI Skills:</strong> Prompt Engineering</p>
+
+  <h2>SOFT SKILLS</h2>
+  <p>Problem Solving, Team Collaboration, Quick Learning, Professional Ethics, Communication, Time Management, Critical Thinking, Leadership</p>
+
+  <h2>LANGUAGES</h2>
+  <p><strong>Urdu:</strong> Native &nbsp;|&nbsp; <strong>English:</strong> Professional Working Proficiency</p>
+
+  <h2>PROJECTS</h2>
+  <div class="proj-item">
+    <div class="proj-header">
+      <span>Final Year Project (FYP) - CampusConnect</span>
+      <span>Full-Stack Job & Career Portal</span>
     </div>
-    <div>
-      <p><strong>Backend & DB:</strong> Django REST Framework, Node.js, PHP, MySQL, SQLite</p>
-      <p><strong>Tools & AI:</strong> VS Code, Git/GitHub, Excel, Prompt Engineering</p>
+    <ul>
+      <li>Full-stack job portal for students, alumni, and employers using <strong>Django REST Framework</strong> and <strong>React</strong>, with skill matching, JWT authentication, and role-based access.</li>
+      <li>Implemented responsive UI, resume management, notifications, and admin moderation features.</li>
+    </ul>
+  </div>
+
+  <div class="proj-item">
+    <div class="proj-header">
+      <span>Online Book Store</span>
+      <span>E-Commerce Application</span>
     </div>
+    <ul>
+      <li>Developed a web-based bookstore using <strong>PHP, MySQL, HTML, CSS, and JavaScript</strong>, enabling users to browse, search, and purchase books online.</li>
+      <li>Implemented user authentication, shopping cart functionality, order management, and an admin panel for managing books and inventory.</li>
+    </ul>
   </div>
 
   <h2>CERTIFICATIONS</h2>
   <ul>
-    <li>Introduction to Python — Kaggle</li>
-    <li>Google Prompting Essentials Specialization — Google</li>
-    <li>Getting Started with Excel — Coursera</li>
+    <li>Introduction to Python (Kaggle)</li>
+    <li>Getting Started with Excel (Coursera)</li>
+    <li>Google Prompting Essentials Specialization (Google)</li>
   </ul>
 </body>
 </html>
