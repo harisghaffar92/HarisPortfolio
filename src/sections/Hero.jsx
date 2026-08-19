@@ -88,18 +88,18 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Trust Indicator Stack */}
-            <div className="pt-6 flex items-center gap-4 border-t border-white/10 max-w-md">
-              <div className="flex -space-x-2 overflow-hidden">
-                <div className="inline-block h-9 w-9 rounded-full ring-2 ring-[#07090e] bg-sky-500/20 text-sky-300 flex items-center justify-center text-xs font-mono font-bold">
+            {/* Tech Stack Pills */}
+            <div className="pt-6 flex flex-wrap items-center gap-3 border-t border-white/10 max-w-md">
+              <div className="flex items-center gap-2">
+                <span className="px-3 py-1 rounded-lg bg-sky-500/15 border border-sky-500/30 text-sky-300 text-xs font-mono font-bold">
                   React
-                </div>
-                <div className="inline-block h-9 w-9 rounded-full ring-2 ring-[#07090e] bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-xs font-mono font-bold">
+                </span>
+                <span className="px-3 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold">
                   Django
-                </div>
-                <div className="inline-block h-9 w-9 rounded-full ring-2 ring-[#07090e] bg-purple-500/20 text-purple-300 flex items-center justify-center text-xs font-mono font-bold">
-                  AI
-                </div>
+                </span>
+                <span className="px-3 py-1 rounded-lg bg-purple-500/15 border border-purple-500/30 text-purple-300 text-xs font-mono font-bold">
+                  AI & LLMs
+                </span>
               </div>
               <div className="text-xs text-slate-300 font-light">
                 <strong className="text-white font-semibold">Practical Software Builder</strong>

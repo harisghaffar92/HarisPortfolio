@@ -14,16 +14,16 @@ os.makedirs(MOBILE_DIR, exist_ok=True)
 with zipfile.ZipFile(ZIP_PATH, 'r') as z:
     all_files = sorted([f for f in z.namelist() if f.endswith('.jpg')])
     total_raw = len(all_files)
-    print(f"Total raw frames in zip: {total_raw}")
-    
-    # Desktop sampling: target ~85 frames
-    target_desktop_count = 85
+    print(f"Sampling optimized sequence from {total_raw} raw frames...")
+
+    # Target 75 frames for desktop (ultra-smooth scroll, fast load, 0 lag)
+    target_desktop_count = 75
     step_d = (total_raw - 1) / (target_desktop_count - 1)
     desktop_indices = [int(round(i * step_d)) for i in range(target_desktop_count)]
     desktop_indices = sorted(list(dict.fromkeys(desktop_indices)))
 
-    # Mobile sampling: target ~40 frames
-    target_mobile_count = 40
+    # Target 35 frames for mobile
+    target_mobile_count = 35
     step_m = (total_raw - 1) / (target_mobile_count - 1)
     mobile_indices = [int(round(i * step_m)) for i in range(target_mobile_count)]
     mobile_indices = sorted(list(dict.fromkeys(mobile_indices)))
@@ -65,4 +65,4 @@ manifest = {
 with open(MANIFEST_PATH, "w") as f:
     json.dump(manifest, f, indent=2)
 
-print(f"Processed successfully! Desktop frames: {len(desktop_frames)}, Mobile frames: {len(mobile_frames)}")
+print(f"Optimized frame processing complete! Desktop: {len(desktop_frames)} frames, Mobile: {len(mobile_frames)} frames.")

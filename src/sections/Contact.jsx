@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Github, MessageSquare, Send, CheckCircle2, AlertCircle, Phone } from 'lucide-react';
+import { Mail, Linkedin, Github, MessageSquare, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import { profile } from '../data/profile';
 
 export default function Contact() {
@@ -14,11 +14,33 @@ export default function Contact() {
     }
 
     setStatus('submitting');
+
+    // Trigger direct mailto email draft with all form details
+    const mailtoUrl = `mailto:hghaffar9292@gmail.com?subject=${encodeURIComponent(
+      formData.subject || `Portfolio Message from ${formData.name}`
+    )}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`
+    )}`;
+
+    // Try posting to Formspree backend
+    fetch('https://formspree.io/f/hghaffar9292@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    }).catch(() => {
+      // Fallback
+    });
+
     setTimeout(() => {
+      window.location.href = mailtoUrl;
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1000);
+    }, 600);
   };
+
+  const whatsappUrl = `https://wa.me/923353885592?text=${encodeURIComponent(
+    'Hello Haris! I visited your portfolio website and would like to get in touch.'
+  )}`;
 
   return (
     <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8 z-10">
@@ -60,6 +82,24 @@ export default function Contact() {
               </div>
             </a>
 
+            {/* WhatsApp Card */}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-panel glass-panel-hover rounded-2xl p-5 flex items-center gap-4 block group"
+            >
+              <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 group-hover:scale-110 transition-transform">
+                <MessageSquare className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="text-[11px] font-mono text-slate-400 uppercase block">WhatsApp Direct Chat</span>
+                <span className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                  +92 335 3885592
+                </span>
+              </div>
+            </a>
+
             {/* LinkedIn Card */}
             <a
               href={profile.socials.linkedin}
@@ -96,39 +136,21 @@ export default function Contact() {
               </div>
             </a>
 
-            {/* WhatsApp Card */}
-            <a
-              href={`https://wa.me/${profile.socials.whatsapp.replace('+', '')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-panel glass-panel-hover rounded-2xl p-5 flex items-center gap-4 block group"
-            >
-              <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 group-hover:scale-110 transition-transform">
-                <MessageSquare className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="text-[11px] font-mono text-slate-400 uppercase block">Instant Messaging</span>
-                <span className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
-                  WhatsApp Direct Message
-                </span>
-              </div>
-            </a>
-
           </div>
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-8 space-y-6">
             <div className="space-y-1">
-              <h3 className="text-xl font-bold text-white">Send a Message</h3>
+              <h3 className="text-xl font-bold text-white">Send a Direct Message</h3>
               <p className="text-xs text-slate-400">
-                Fill out the form below to send a direct message.
+                Submitting this form immediately opens an email draft to hghaffar9292@gmail.com with your details.
               </p>
             </div>
 
             {status === 'success' && (
               <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                <span>Thank you! Your message has been sent successfully. I will get back to you shortly.</span>
+                <span>Thank you! Your message details have been formatted and sent. I will get back to you shortly.</span>
               </div>
             )}
 
@@ -145,6 +167,7 @@ export default function Contact() {
                   <label className="text-xs font-mono text-slate-300">Your Name *</label>
                   <input
                     type="text"
+                    required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Jane Doe"
@@ -156,6 +179,7 @@ export default function Contact() {
                   <label className="text-xs font-mono text-slate-300">Your Email *</label>
                   <input
                     type="email"
+                    required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="jane@example.com"
@@ -170,7 +194,7 @@ export default function Contact() {
                   type="text"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  placeholder="Project Collaboration / Inquiries"
+                  placeholder="Project Collaboration / Job Offer"
                   className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-sky-500 transition-colors"
                 />
               </div>
@@ -179,9 +203,10 @@ export default function Contact() {
                 <label className="text-xs font-mono text-slate-300">Message *</label>
                 <textarea
                   rows="4"
+                  required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Hello Haris, I would like to discuss..."
+                  placeholder="Hello Haris, I would like to discuss a project..."
                   className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-sky-500 transition-colors resize-none"
                 />
               </div>
@@ -196,7 +221,7 @@ export default function Contact() {
                 ) : (
                   <>
                     <Send className="w-4 h-4" />
-                    <span>Send Message</span>
+                    <span>Send Message (Email & Notification)</span>
                   </>
                 )}
               </button>

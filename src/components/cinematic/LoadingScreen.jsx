@@ -1,34 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Code2, Cpu, Sparkles, Terminal } from 'lucide-react';
+import { Code2, Sparkles, Terminal } from 'lucide-react';
 
 export default function LoadingScreen({ loadProgress, isReady }) {
   const [displayProgress, setDisplayProgress] = useState(0);
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    // Calculate target percentage (at least show progress up to hero ready)
     const target = Math.min(Math.round(loadProgress * 100), 100);
-    
-    // Smooth progress counter animation
-    const interval = setInterval(() => {
-      setDisplayProgress((prev) => {
-        if (prev < target) return prev + 1;
-        if (isReady && prev < 100) return prev + 2;
-        return prev;
-      });
-    }, 15);
-
-    return () => clearInterval(interval);
-  }, [loadProgress, isReady]);
+    setDisplayProgress(target);
+  }, [loadProgress]);
 
   useEffect(() => {
-    if (isReady && displayProgress >= 90) {
+    if (isReady && displayProgress >= 100) {
       const timer = setTimeout(() => {
-        setDisplayProgress(100);
-        setTimeout(() => {
-          setHidden(true);
-        }, 400);
-      }, 300);
+        setHidden(true);
+      }, 400);
       return () => clearTimeout(timer);
     }
   }, [isReady, displayProgress]);
@@ -61,15 +47,15 @@ export default function LoadingScreen({ loadProgress, isReady }) {
           </h2>
           <p className="text-xs font-mono text-amber-400 flex items-center justify-center gap-2">
             <Terminal className="w-3.5 h-3.5" />
-            <span>INITIALIZING CINEMATIC ENGINE...</span>
+            <span>LOADING WEBSITE ASSETS & CANINE ENGINE...</span>
           </p>
         </div>
 
         {/* Progress Bar Container */}
         <div className="space-y-3">
-          <div className="w-full h-2 rounded-full bg-white/10 overflow-hidden p-[1px] border border-white/10">
+          <div className="w-full h-2.5 rounded-full bg-white/10 overflow-hidden p-[1px] border border-white/10">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-amber-500 via-sky-400 to-indigo-500 transition-all duration-200 ease-out shadow-glowCyan"
+              className="h-full rounded-full bg-gradient-to-r from-amber-500 via-sky-400 to-indigo-500 transition-all duration-150 ease-out shadow-glowCyan"
               style={{ width: `${displayProgress}%` }}
             />
           </div>
@@ -77,7 +63,7 @@ export default function LoadingScreen({ loadProgress, isReady }) {
           <div className="flex items-center justify-between text-xs font-mono text-slate-400">
             <span className="flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-sky-400" />
-              <span>Loading video frames</span>
+              <span>Preloading frame assets</span>
             </span>
             <span className="font-bold text-sky-300">{displayProgress}%</span>
           </div>
@@ -85,7 +71,7 @@ export default function LoadingScreen({ loadProgress, isReady }) {
 
         {/* Status text */}
         <div className="text-[11px] font-mono text-slate-400">
-          Full-Stack & AI Developer Portfolio • {isReady ? 'Ready' : 'Connecting'}
+          Full-Stack & AI Developer Portfolio • {isReady ? 'Assets Loaded' : 'Downloading Assets'}
         </div>
 
       </div>

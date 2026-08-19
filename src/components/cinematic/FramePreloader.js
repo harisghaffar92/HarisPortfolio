@@ -20,22 +20,22 @@ class FramePreloader {
       this.frames = isMobile ? this.manifest.mobile.frames : this.manifest.desktop.frames;
       this.imagesCache = new Array(this.frames.length).fill(null);
 
-      // Stage 1: Load Critical Hero Frames (first 10 frames)
-      const criticalCount = Math.min(10, this.frames.length);
-      const criticalPromises = [];
-
-      for (let i = 0; i < criticalCount; i++) {
-        criticalPromises.push(this.loadImage(i));
+      // Real Preload: Load all frame assets completely before finishing
+      const batchSize = 10;
+      for (let i = 0; i < this.frames.length; i += batchSize) {
+        const batch = [];
+        for (let j = i; j < Math.min(i + batchSize, this.frames.length); j++) {
+          batch.push(this.loadImage(j));
+        }
+        await Promise.all(batch);
       }
 
-      await Promise.all(criticalPromises);
       this.isLoaded = true;
-
-      // Stage 2: Load remaining frames progressively in background
-      this.loadRemainingFrames();
+      this.notifyProgress();
       return this;
     } catch (err) {
-      console.warn('Frame preloader initialized with fallback:', err);
+      console.warn('Frame preloader fallback:', err);
+      this.isLoaded = true;
       return this;
     }
   }
@@ -64,18 +64,6 @@ class FramePreloader {
         resolve(null);
       };
     });
-  }
-
-  async loadRemainingFrames() {
-    const batchSize = 6;
-    for (let i = 10; i < this.frames.length; i += batchSize) {
-      const batch = [];
-      for (let j = i; j < Math.min(i + batchSize, this.frames.length); j++) {
-        batch.push(this.loadImage(j));
-      }
-      await Promise.all(batch);
-      await new Promise(r => setTimeout(r, 10));
-    }
   }
 
   onProgress(cb) {

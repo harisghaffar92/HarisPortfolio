@@ -107,7 +107,7 @@ export default function About() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">Current Focus</h4>
-                  <p className="text-xs text-slate-400">Advanced React & Backend Architecture</p>
+                  <p className="text-xs text-slate-400">Backend Architecture</p>
                 </div>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed">

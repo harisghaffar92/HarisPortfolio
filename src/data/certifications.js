@@ -5,8 +5,10 @@ export const certifications = [
     issuer: "Kaggle",
     category: "Programming & Data Science",
     icon: "Terminal",
+    image: "/certificates/kaggle_python.png",
     description: "Core syntax, data structures, control flow, functions, and algorithmic logic in Python.",
-    verified: true
+    verified: true,
+    linkedinUrl: "https://www.linkedin.com/in/haris-ghaffar-0043a5292/details/certifications/"
   },
   {
     id: "google-prompting",
@@ -14,8 +16,10 @@ export const certifications = [
     issuer: "Google",
     category: "Artificial Intelligence",
     icon: "Sparkles",
+    image: "/certificates/google_prompting.png",
     description: "Advanced techniques in prompt design, instruction tuning, LLM context framing, and practical generative AI workflows.",
-    verified: true
+    verified: true,
+    linkedinUrl: "https://www.linkedin.com/in/haris-ghaffar-0043a5292/details/certifications/"
   },
   {
     id: "coursera-excel",
@@ -23,8 +27,10 @@ export const certifications = [
     issuer: "Coursera",
     category: "Data Analysis & Tools",
     icon: "FileSpreadsheet",
+    image: "/certificates/coursera_excel.png",
     description: "Data modeling, formulas, visualization, spreadsheet organization, and analysis fundamentals.",
-    verified: true
+    verified: true,
+    linkedinUrl: "https://www.linkedin.com/in/haris-ghaffar-0043a5292/details/certifications/"
   }
 ];
 

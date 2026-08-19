@@ -13,6 +13,6 @@ export const profile = {
     github: "https://github.com/harisghaffar92",
     linkedin: "https://www.linkedin.com/in/haris-ghaffar-0043a5292/",
     email: "hghaffar9292@gmail.com",
-    whatsapp: "wa.me/+923353885592",
+    whatsapp: "+923353885592"
   }
 };

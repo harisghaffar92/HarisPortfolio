@@ -25,31 +25,5 @@ export const projects = [
       { label: "Architecture", value: "Decoupled REST API" },
       { label: "Security", value: "JWT & RBAC" }
     ]
-  },
-  {
-    id: "bookstore",
-    name: "Online Book Store",
-    type: "Full-Stack E-Commerce Application",
-    subtitle: "Complete digital bookstore with user authentication, dynamic catalog search, cart management, and admin inventory control.",
-    featured: true,
-    image: "/projects/bookstore.png",
-    highlights: [
-      "Secure User Authentication & Password Hashing",
-      "Interactive Book Catalog with Genre & Keyword Filtering",
-      "Real-time Shopping Cart & Order Checkout Pipeline",
-      "Admin Inventory Dashboard with CRUD Operations",
-      "Relational Database Schema for Orders & Customers"
-    ],
-    technologies: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript"],
-    problem: "Independent bookstores require an easy-to-manage online e-commerce solution with real-time inventory updates without complex third-party SaaS subscriptions.",
-    solution: "A custom PHP + MySQL web application delivering fast page loads, direct order tracking, and an intuitive administration dashboard for product stock control.",
-    architecture: "Monolithic MVC structure with PHP backend processing, relational MySQL database schema, and vanilla JavaScript for dynamic frontend DOM manipulation.",
-    github: "https://github.com/harisghaffar92",
-    liveDemo: "",
-    metrics: [
-      { label: "Database", value: "Relational MySQL" },
-      { label: "Backend", value: "Native PHP Engine" },
-      { label: "Admin Panel", value: "Full CRUD Control" }
-    ]
   }
 ];

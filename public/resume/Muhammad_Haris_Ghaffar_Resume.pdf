@@ -1,0 +1,36 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >> endobj
+4 0 obj << /Length 480 >> stream
+BT
+/F1 22 Tf 50 740 Td (MUHAMMAD HARIS GHAFFAR) Tj
+/F1 12 Tf 0 -25 Td (Full-Stack Developer & AI/ML Developer) Tj
+0 -18 Td (Email: hghaffar9292@gmail.com | Phone/WhatsApp: +92 335 3885592) Tj
+0 -18 Td (GitHub: https://github.com/harisghaffar92 | LinkedIn: haris-ghaffar-0043a5292) Tj
+0 -30 Td (EDUCATION:) Tj
+0 -18 Td (BS Computer Science - University of Sahiwal (2022 - 2026) | CGPA: 3.44 / 4.00) Tj
+0 -30 Td (FEATURED PROJECT:) Tj
+0 -18 Td (CampusConnect - Full-Stack Job & Career Portal (React, Django REST, JWT)) Tj
+0 -30 Td (TECHNICAL SKILLS:) Tj
+0 -18 Td (Python, C++, JavaScript, React, Django REST, Node.js, PHP, MySQL, SQLite, AI Prompting) Tj
+0 -30 Td (CERTIFICATIONS:) Tj
+0 -18 Td (- Introduction to Python (Kaggle)) Tj
+0 -18 Td (- Google Prompting Essentials Specialization (Google)) Tj
+0 -18 Td (- Getting Started with Excel (Coursera)) Tj
+ET
+endstream
+endobj
+5 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000059 00000 n 
+0000000116 00000 n 
+0000000243 00000 n 
+0000000774 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+843
+%%EOF
